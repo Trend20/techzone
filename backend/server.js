@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
+const bookRoutes = require('./routes/book');
+
 
 require('dotenv').config();
 
@@ -16,6 +18,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // routes
+app.use('/book', bookRoutes);
 
 // port
 const PORT = process.env.PORT || 5000;
