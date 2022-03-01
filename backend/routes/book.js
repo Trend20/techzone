@@ -34,7 +34,7 @@ router.route('/add').post((req, res) =>{
       .catch(error => res.status(400).json('Error ' + error))
 });
 
-// DELETE EXERCISE
+// DELETE BOOK
 router.route('/:id').delete((req, res) =>{
   Book.findByIdAndRemove(req.params.id)
       .then(res => res.json('Exercise deleted!!'))

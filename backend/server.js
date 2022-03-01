@@ -9,6 +9,17 @@ const bookRoutes = require('./routes/book');
 require('dotenv').config();
 
 
+// CONNECTION DETAILS
+const url = process.env.DATABASE_URL;
+mongoose.connect(url);
+
+const connection = mongoose.connection;
+
+
+connection.once('open', () =>{
+  console.log('Application is connected to the database successfully!');
+});
+
 // declare an express application
 
 const app = express();
