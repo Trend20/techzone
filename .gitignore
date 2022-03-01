@@ -9,10 +9,14 @@
 
 # dependencies
 /node_modules
+/backend/node_modules
 
 # profiling files
 chrome-profiler-events*.json
 
+
+# environment files
+/backend/.env
 # IDEs and editors
 /.idea
 .project
