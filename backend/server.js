@@ -4,6 +4,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 
 const bookRoutes = require('./routes/book');
+const userRoutes = require('./routes/user');
 
 
 require('dotenv').config();
@@ -30,6 +31,7 @@ app.use(bodyParser.json());
 
 // routes
 app.use('/book', bookRoutes);
+app.use('/user', userRoutes);
 
 // port
 const PORT = process.env.PORT || 5000;
