@@ -50,7 +50,7 @@ router.route('/update/:id').post((req, res) =>{
         book.title = req.body.title
         book.publisher = req.body.publisher
 
-        books.save()
+        book.save()
              .then(() =>res.json('Book updated!!'))
              .catch(error => res.status(400).json('Error ' + error))
       })
